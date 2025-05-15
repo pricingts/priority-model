@@ -1,0 +1,35 @@
+# Pesos globales para combinar los tres componentes
+weights:
+  w1: 0.35  # importancia client_score
+  w2: 0.3  # importancia complexity_score
+  w3: 0.35  # importancia proportion_score
+
+incoterm_weights: #subirle dos puntos decimales
+  FOB: 0.4
+  CIF: 0.3
+  EXW: 0.8
+  DDP: 1.0
+  FCA: 0.8
+  CFR: 0.3
+  CPT: 0.4
+  CIP: 0.5
+  DAP: 0.8
+
+modality_weights:
+  FCL: 0.6
+  LCL: 0.5
+  AEREO: 0.4
+
+origin_weights:
+  Norteamerica: 0.6
+  SurAmerica: 0.5
+  Europa: 0.8
+  Asia: 0.9
+  CentroAmerica: 0.7
+
+destination_weights:
+  Norteamerica: 0.4
+  SurAmerica: 0.4
+  Europa: 0.6
+  Asia: 0.7
+  CentroAmerica: 0.6
