@@ -1,15 +1,15 @@
 from pathlib import Path
 import pandas as pd
-from src.utils               import load_config
-from src.loaders            import load_all_clients_from_sheets
-from src.transformers       import compute_client_map, compute_proportion_map
-from src.priority_calculator import PriorityCalculator
+from src.prioridad.utils               import load_config
+from src.prioridad.loaders            import load_all_clients_from_sheets
+from src.prioridad.transformers       import compute_client_map, compute_proportion_map
+from src.prioridad.priority_calculator import PriorityCalculator
 import matplotlib.pyplot as plt
 
 def main():
     # ─── Parámetros de entorno ────────────────────────────────────────────────
     config_path   = Path('config/weights.yaml')
-    clients_file  = Path('data/top_clientes.xlsx')
+    clients_file  = Path('data/top_profit.xlsx')
     original_csv  = Path('Duracion Envio Solicitudes - clientes.csv')
     creds_json    = 'credentials.json'
     sheet_ids     = [

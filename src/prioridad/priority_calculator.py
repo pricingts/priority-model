@@ -31,9 +31,7 @@ class PriorityCalculator:
     ) -> float:
         # 1) lookup de client & proportion
         c_w = self.client_map.get(cliente, 0.0)
-        print(c_w)
         p_w = self.prop_map.get(cliente,   0.0)
-        print(p_w)
 
         # 2) lookup de sub-pesos
         i_w = self.inc_map.get(incoterm,    0.0)
@@ -41,9 +39,6 @@ class PriorityCalculator:
         o_w = self.orig_map.get(origin,     0.0)
         d_w = self.dest_map.get(destination,0.0)
 
-        # 3) complexity = media aritmética de los 4
         complexity = (i_w + m_w + o_w + d_w) / 4
-        print(complexity)
 
-        # 4) score final
         return self.w1 * c_w + self.w2 * complexity + self.w3 * p_w

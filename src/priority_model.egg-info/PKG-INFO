@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: priority-model
+Version: 0.1.0
+Summary: Modelo ponderado de prioridad para el RMS
+Requires-Python: >=3.10
+Requires-Dist: pandas>=2.2
+Requires-Dist: rapidfuzz>=3.0
+Requires-Dist: unidecode>=1.3

@@ -1,6 +1,6 @@
 import pandas as pd
 from typing import Mapping
-from src.standarization import standardize_prop_clients
+from src.prioridad.standarization import standardize_prop_clients
 from typing import Dict
 import numpy as np
 
@@ -63,7 +63,7 @@ def compute_proportion_map(
 def compute_client_map(
     df_clients: pd.DataFrame,
     client_col: str = 'cliente',
-    rank_col: str = 'ranking',
+    rank_col: str = 'rank',
     alpha: float = None
 ) -> Dict[str, float]:
 

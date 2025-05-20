@@ -8,7 +8,7 @@ import pandas as pd
 def load_top_clients(path: str) -> pd.DataFrame:
     """Lee ranking de clientes y comercial asociado."""
     df = pd.read_excel(path)
-    return df[['cliente', 'ranking', 'comercial']].dropna()
+    return df[['CLIENTE', 'PROFIT', 'RANK']].dropna()
 
 def load_operations_data(paths: List[str]) -> pd.DataFrame:
     """Concatena archivos Excel donde cada fila es una operación."""
